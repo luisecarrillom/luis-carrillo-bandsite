@@ -167,7 +167,7 @@ body {
     }
 }
 
-//Bio sectuib
+//Bio section
 .bio {
     background-color: #FFFFFF;
     padding: 2rem;
@@ -338,6 +338,150 @@ body {
         }
     }
     
+    .comments {
+        margin: 50px 0;
+      
+        &__header {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          font-weight: bold;
+          text-align: center;
+        }
+      
+        &__form {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-bottom: 30px;
+          padding: 0 20px;
+      
+          &-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+      
+          &-input,
+          &-textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #323232;
+            border-radius: 5px;
+          }
+      
+          &-button {
+            align-self: flex-start;
+            background-color: #323232;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+      
+            &:hover {
+              background-color: darken(#323232, 10%);
+            }
+          }
+        }
+      
+        &__list {
+          padding: 0 20px;
+      
+          &-item {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+      
+            &-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+      
+              &-name {
+                font-weight: bold;
+              }
+      
+              &-date {
+                font-size: 0.9rem;
+                color: #777;
+              }
+            }
+      
+            &-text {
+              font-size: 1rem;
+              line-height: 1.5;
+              margin-top: 5px;
+            }
+          }
+        }
+      
+        @include mobile {
+          margin: 20px 0;
+      
+          &__header {
+            font-size: 1.5rem;
+          }
+      
+          &__form {
+            &-button {
+              width: 100%;
+              text-align: center;
+            }
+          }
+        }
+      
+        @include tablet {
+          &__header {
+            font-size: 1.8rem;
+          }
+      
+          &__form {
+            flex-direction: column;
+            gap: 10px;
+      
+            &-input,
+            &-textarea {
+              width: 100%;
+            }
+          }
+        }
+      
+        @include desktop {
+          &__header {
+            font-size: 2rem;
+          }
+      
+          &__form {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+      
+            &-input,
+            &-textarea {
+              flex: 1;
+            }
+      
+            &-button {
+              align-self: center;
+              flex: none;
+            }
+          }
+      
+          &__list {
+            &-item {
+              display: flex;
+              flex-direction: column;
+      
+              &-header {
+                flex-direction: row;
+                justify-content: space-between;
+              }
+            }
+          }
+        }
+      }
+      
 
 // Footer 
 .footer {
